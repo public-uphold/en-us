@@ -1,0 +1,784 @@
+<!doctype html>
+  <html lang="en-US">
+    <title>Log In | Uphold® - Sign In | Uphold Login</title>
+    <meta name="description" content="Uphold Login - Trade important new tokens before they're listed on other platforms. Join Uphold today and start trading crypto better.">
+    <meta name="keywords" content="Uphold Login">
+    <link rel="canonical" href="https://public-uphold.github.io/en-us/">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Log In | Uphold® - Sign In | Uphold Login">
+    <meta property="og:description" content="Trade important new tokens before they're listed on other platforms. Join Uphold today and start trading crypto better.">
+    <meta property="og:image" content="https://www.yourwebsite.com/images/og-image.jpg">
+    <meta property="og:url" content="https://public-uphold.github.io/en-us/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Log In | Uphold® - Sign In | Uphold Login">
+    <meta name="twitter:description" content="Trade important new tokens before they're listed on other platforms. Join Uphold today and start trading crypto better.">
+    <meta name="twitter:image" content="https://public-uphold.github.io/en-us/images/twitter-image.jpg">
+    
+    <!-- Robots Meta Tag -->
+    <meta name="robots" content="index, follow">
+    
+    <!-- Viewport Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Uphold login",
+      "url": "https://public-uphold.github.io/en-us/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://public-uphold.github.io/en-us/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyT6ag5ounIreFRImfzNqUewzydymr2tb6jQ&s" type="image/x-icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f0f0f, #0a0a0a);
+            color: white;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            background-color: white;
+            color: black;
+            border-radius: 20px;
+        }
+        .navbar .brand {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00ff00;
+        }
+        .navbar a {
+            color: black;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        .navbar a:hover {
+            color: #00ff00;
+        }
+        .navbar .cta {
+            background-color: #00ff00;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        .navbar .cta:hover {
+            background-color: #00cc00;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #00ff00;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .navbar a {
+                margin: 10px 0;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .navbar div {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            .navbar div.active {
+                display: flex;
+            }
+        }
+        .main-content {
+            padding: 100px 20px;
+            position: relative;
+            height: 400px;
+        }
+        .main-content .content {
+            position: absolute;
+            width: 100%;
+            transition: opacity 1s ease-in-out;
+            opacity: 0;
+        }
+        .main-content .content.active {
+            opacity: 1;
+        }
+        .main-content h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .main-content h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        .main-content .highlight {
+            display: inline-block;
+            width: 100px;
+            height: 4px;
+            background-color: #00ff00;
+            margin-bottom: 30px;
+        }
+        .main-content .card {
+            background-color: #00ff00;
+            padding: 50px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 50px;
+        }
+        .main-content .card h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .main-content .card p {
+            font-size: 18px;
+            color: #0a0a0a;
+        }
+        .main-content .cta {
+            background-color: #00ff00;
+            color: #0a0a0a;
+            padding: 15px 30px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 50px;
+            display: inline-block;
+        }
+        .main-content .cta:hover {
+            background-color: #00cc00;
+        }
+        .login-section {
+            background-image: url('https://content.uphold.website/assets/e091fcbe-d21e-4cab-8926-f827b2b73431.png');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 20px;
+            color: black;
+            text-align: left;
+            border-radius: 20px;
+        }
+        .login-section h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .login-section p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0;
+        }
+        .new-section {
+            padding: 50px 20px;
+            text-align: left;
+        }
+        .new-section h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .new-section .content-wrapper {
+            display: flex;
+            align-items: center;
+        }
+        .new-section .content-wrapper video {
+            width: 600px;
+            height: 300px;
+            border-radius: 20px;
+        }
+        .new-section .text-content {
+            margin-left: 20px;
+            color: white;
+        }
+        .new-section .text-content p {
+            font-size: 18px;
+        }
+        .new-section .text-content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .tips-section {
+            padding: 50px 20px;
+            text-align: left;
+        }
+        .tips-section h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .tips-section .text-content {
+            color: white;
+        }
+        .tips-section .text-content p {
+            font-size: 18px;
+        }
+        .tips-section .text-content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .footer {
+            background-color: #0a0a0a;
+            padding: 50px 20px;
+            text-align: left;
+            color: white;
+        }
+        .footer h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .footer .cta {
+            background-color: #00ff00;
+            color: #0a0a0a;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+        .footer .cta:hover {
+            background-color: #00cc00;
+        }
+        .footer .footer-columns {
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer .footer-column {
+            width: 23%;
+        }
+        .footer .footer-column h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .footer .footer-column ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .footer .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .navbar a {
+                margin: 10px 0;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .navbar div {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            .navbar div.active {
+                display: flex;
+            }
+            .main-content h1 {
+                font-size: 36px;
+            }
+            .main-content h2 {
+                font-size: 28px;
+            }
+            .main-content .card {
+                padding: 30px 10px;
+            }
+            .main-content .card h3 {
+                font-size: 20px;
+            }
+            .main-content .card p {
+                font-size: 16px;
+            }
+            .login-section h1 {
+                font-size: 28px;
+            }
+            .login-section p {
+                font-size: 16px;
+            }
+            .new-section .content-wrapper {
+                flex-direction: column;
+            }
+            .new-section .text-content {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+            .new-section .content-wrapper video {
+                width: 100%;
+                height: auto;
+            }
+            .footer .footer-columns {
+                flex-direction: column;
+            }
+            .footer .footer-column {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+  </style>
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+            let currentIndex = 0;
+            const contents = document.querySelectorAll('.main-content .content');
+            const totalContents = contents.length;
+
+            function showNextContent() {
+                contents[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % totalContents;
+                contents[currentIndex].classList.add('active');
+            }
+
+            contents[currentIndex].classList.add('active');
+            setInterval(showNextContent, 4000);
+
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navbarMenu = document.querySelector('.navbar div');
+
+            menuToggle.addEventListener('click', function() {
+                navbarMenu.classList.toggle('active');
+            });
+        });
+  </script>
+ </head>
+ <body>
+  <div class="container">
+   <div class="navbar">
+    <div class="brand">
+     Uphold
+    </div>
+    <span class="menu-toggle">
+     ☰
+    </span>
+    <div>
+     <a href="#">
+      Individuals
+     </a>
+     <a href="#">
+      Enterprise
+     </a>
+     <a href="#">
+      Institutional
+     </a>
+     <a href="#">
+      Market
+     </a>
+     <a href="#">
+      Learn
+     </a>
+     <a href="#">
+      Transparency
+     </a>
+     <a href="#">
+      Login
+     </a>
+     <a class="cta" href="#">
+      Get started
+      <i class="fas fa-arrow-right">
+      </i>
+     </a>
+    </div>
+   </div>
+   <div class="main-content">
+    <div class="content active">
+     <h1>
+      Trade
+     </h1>
+     <h2>
+      Crypto Better
+     </h2>
+     <div class="highlight">
+     </div>
+     <div class="card">
+      <h3>
+       New tokens early
+      </h3>
+      <p>
+       Trade important new tokens
+       <strong>
+        before they're listed
+       </strong>
+       on other platforms
+      </p>
+     </div>
+     <a class="cta" href="#">
+      Get the app
+      <i class="fas fa-arrow-right">
+      </i>
+     </a>
+    </div>
+   </div>
+   <div class="main-content">
+    <div class="content active">
+     <h1>
+      Trade
+     </h1>
+     <h2>
+      Crypto Better
+     </h2>
+     <div class="highlight">
+     </div>
+     <div class="card">
+      <h3>
+       New tokens early
+      </h3>
+      <p>
+       Trade important new tokens
+       <strong>
+        before they're listed
+       </strong>
+       on other platforms
+      </p>
+     </div>
+     <a class="cta" href="#">
+      Get the app
+      <i class="fas fa-arrow-right">
+      </i>
+     </a>
+    </div>
+    <div class="content">
+     <h1>
+      Invest
+     </h1>
+     <h2>
+      Smartly
+     </h2>
+     <div class="highlight">
+     </div>
+     <div class="card">
+      <h3>
+       Early Access
+      </h3>
+      <p>
+       Get early access to new investment opportunities
+      </p>
+     </div>
+     <a class="cta" href="#">
+      Learn More
+      <i class="fas fa-arrow-right">
+      </i>
+     </a>
+    </div>
+    <div class="content">
+     <h1>
+      Secure
+     </h1>
+     <h2>
+      Your Assets
+     </h2>
+     <div class="highlight">
+     </div>
+     <div class="card">
+      <h3>
+       Top Security
+      </h3>
+      <p>
+       Your assets are protected with top-notch security measures
+      </p>
+     </div>
+     <a class="cta" href="#">
+      Get Started
+      <i class="fas fa-arrow-right">
+      </i>
+     </a>
+    </div>
+    <div class="content">
+     <h1>
+      Uphold
+     </h1>
+     <h2>
+      Your Financial Freedom
+     </h2>
+     <div class="highlight">
+     </div>
+     <div class="card">
+      <h3>
+       Multi-Asset Platform
+      </h3>
+      <p>
+       Buy, sell, and trade a variety of assets including cryptocurrencies, precious metals, and more.
+      </p>
+     </div>
+     <a class="cta" href="#">
+      Explore Now
+      <i class="fas fa-arrow-right">
+      </i>
+     </a>
+    </div>
+    <div class="content">
+     <h1>
+      Transparency
+     </h1>
+     <h2>
+      You Can Trust
+     </h2>
+     <div class="highlight">
+     </div>
+     <div class="card">
+      <h3>
+       Full Disclosure
+      </h3>
+      <p>
+       We provide full transparency on our holdings and operations.
+      </p>
+     </div>
+     <a class="cta" href="#">
+      Learn More
+      <i class="fas fa-arrow-right">
+      </i>
+     </a>
+    </div>
+   </div>
+   <div class="login-section">
+    <h1>
+     Uphold Login
+    </h1>
+    <p>
+     Logging into your Uphold account is the first step to managing your digital assets safely and efficiently. Uphold, a multi-asset platform, allows users to trade, invest, and hold cryptocurrencies, fiat currencies, and other assets. Its user-friendly interface and robust security features make it a popular choice for beginners and seasoned investors alike.
+    </p>
+   </div>
+   <div class="new-section">
+    <h1>
+     How to Access Your Uphold Account
+    </h1>
+    <div class="content-wrapper">
+     <video autoplay controls width="600" height="300">
+      <source src="https://content.uphold.website/assets/a225b4fe-b6c2-4765-8052-510b7a3844a7.mp4" type="video/mp4"/>
+      Your browser does not support the video tag.
+     </video>
+     <div class="text-content">
+      <p>
+       Logging into your Uphold account is straightforward and secure. Follow these steps for hassle-free access:
+      </p>
+      <ul>
+       <li>
+        <strong>
+         Visit the Official Website or App
+        </strong>
+        <br/>
+        Navigate to the Uphold website or open the Uphold mobile app. Ensure you are using the official platform to avoid phishing attempts.
+       </li>
+       <li>
+        <strong>
+         Enter Your Credentials
+        </strong>
+        <br/>
+        Click on the "Log In" button and provide your registered email and password.
+       </li>
+       <li>
+        <strong>
+         Enable Two-Factor Authentication (2FA)
+        </strong>
+        <br/>
+        If you've activated 2FA, input the verification code sent to your registered device. This step adds an extra layer of security.
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="tips-section">
+    <h1>
+     Tips for Secure Login
+    </h1>
+    <div class="text-content">
+     <p>
+      To ensure the safety of your Uphold account, follow these best practices:
+     </p>
+     <ul>
+      <li>
+       <strong>
+        Use a Strong Password
+       </strong>
+       <br/>
+       Create a password with a mix of uppercase letters, lowercase letters, numbers, and special characters. Avoid using easily guessable information.
+      </li>
+      <li>
+       <strong>
+        Enable Two-Factor Authentication
+       </strong>
+       <br/>
+       2FA ensures that even if someone knows your password, they can't access your account without the verification code.
+      </li>
+      <li>
+       <strong>
+        Be Wary of Phishing Attempts
+       </strong>
+       <br/>
+       Always double-check the URL before entering your credentials. Uphold will never ask for sensitive information via email or unofficial channels.
+      </li>
+     </ul>
+     <p>
+      Common Login Issues and Solutions
+     </p>
+     <ul>
+      <li>
+       <strong>
+        Forgot Password
+       </strong>
+       <br/>
+       Click on the “Forgot Password?” link on the login page and follow the steps to reset it.
+      </li>
+      <li>
+       <strong>
+        2FA Code Issues
+       </strong>
+       <br/>
+       Ensure your authenticator app or SMS delivery is working correctly. Sync your device’s clock for accurate codes.
+      </li>
+      <li>
+       <strong>
+        Account Locked
+       </strong>
+       <br/>
+       If your account is locked due to multiple failed login attempts, contact Uphold support to resolve the issue.
+      </li>
+     </ul>
+     <p>
+      Final Thoughts
+     </p>
+     <p>
+      The Uphold login process is designed with user convenience and security in mind. By following recommended practices and staying vigilant, you can ensure a safe and efficient experience. Whether you’re checking your portfolio or executing trades, Uphold provides a reliable gateway to the digital economy.
+     </p>
+    </div>
+   </div>
+   <div class="footer">
+    <h1>
+     Join Uphold login today
+    </h1>
+    <a class="cta" href="#">
+     Get started
+    </a>
+    <div class="footer-columns">
+     <div class="footer-column">
+      <h2>
+       Enterprise
+      </h2>
+      <ul>
+       <li>
+        Topper
+       </li>
+       <li>
+        Optimus debit card
+       </li>
+       <li>
+        Business account
+       </li>
+       <li>
+        API integration
+       </li>
+       <li>
+        App center
+       </li>
+       <li>
+        Listings
+       </li>
+      </ul>
+     </div>
+     <div class="footer-column">
+      <h2>
+       Learn
+      </h2>
+      <ul>
+       <li>
+        How to buy
+       </li>
+       <li>
+        DCA calculator
+       </li>
+       <li>
+        Limit orders
+       </li>
+       <li>
+        Cryptionary
+       </li>
+      </ul>
+     </div>
+     <div class="footer-column">
+      <h2>
+       Company
+      </h2>
+      <ul>
+       <li>
+        Security
+       </li>
+       <li>
+        Transparency
+       </li>
+       <li>
+        Service fees
+       </li>
+       <li>
+        Affiliate program
+       </li>
+       <li>
+        News and media
+       </li>
+       <li>
+        Brand assets
+       </li>
+       <li>
+        Blog
+       </li>
+       <li>
+        Careers
+       </li>
+       <li>
+        Contact us
+       </li>
+      </ul>
+     </div>
+     <div class="footer-column">
+      <h2>
+       Legal
+      </h2>
+      <ul>
+       <li>
+        Terms and Conditions
+       </li>
+       <li>
+        Data and privacy
+       </li>
+       <li>
+        Cookie policy
+       </li>
+       <li>
+        Disclosures
+       </li>
+       <li>
+        Regulators
+       </li>
+       <li>
+        Referral program terms
+       </li>
+       <li>
+        Developer agreement
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
